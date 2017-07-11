@@ -1,0 +1,64 @@
+<div ng-controller='landmarkController'>
+   <form name="frm" ng-submit="addToList()">
+      <input ng-keyup="addToList()" style="width:800px;line-height:40px;text" placeholder="Enter search text here and press enter" type="text" name="newItem" ng-model="newItem" required />
+      <div>
+      <img style ="height: 20px;width: 20px" src="images/mic.png">
+      <span style="margin-left: 8px;font-style: italic;color: rgba(3, 169, 244, 0.88);margin-top:20px">For Voice Based Support say ""</span></div>
+    </form>
+   <div  ng-if="searchPanelVisible" style="width: 800px;border: 1px solid lightgray;">
+   <div style="width: 800px;height:30;background: #03a9f4"></div>	
+   <div style="background-image: url('../../images/wallpaper.jpg');width: 800px;overflow: hidden;">	
+
+   <div id="wrap">
+    <div id="left_col">
+        Title
+    </div>
+    <div id="right_col">
+        Author
+    </div>
+</div>
+               
+    <ul>
+      <li style="display: block;" ng-repeat="item in items track by $index">
+      
+
+   <div id="wrap">
+    <div id="left_col">
+     <a ng-href="{{item.url}}" target="_blank" ng-bind="item.title;" ></a> 
+    </div>
+    <div id="right_col">
+       <p>{{item.author}} {{item.karma}}</p>  
+      
+
+        <br>
+    </div>
+    
+ 
+
+ 	 </div>
+   <br>
+   <hr>
+	
+	 </li>
+    </ul>
+
+ 
+
+</div>
+    </div>
+
+     
+<div  ng-if="searchPanelVisible">
+ <button ng-click="prevBtnClicked()">
+        Previous
+    </button>
+   
+    <button ng-click="nextBtnClicked()">
+        Next
+    </button>
+</div>    
+
+  </div>
+
+  
+     

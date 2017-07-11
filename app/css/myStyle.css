@@ -1,0 +1,438 @@
+body {
+	background-color: #f0efef;
+}
+
+h1 {
+	color: blue;
+}
+
+#wrap {
+   width:600px;
+   margin:0 auto;
+}
+#left_col {
+   float:left;
+   width:50%;
+}
+#right_col {
+   float:right;
+   width:50%;
+}
+
+input{
+    background-color: white
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+   /* border: 1px solid #dddddd;*/
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.fieldValid {
+    border: 2px solid #00ff00;
+}
+
+.fieldInvalid {
+    border: 2px solid #ff0000;
+}
+
+li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+
+/* STRUCTURE */
+
+#pagewrap {
+    padding: 5px;
+    width: 960px;
+    margin: 20px auto;
+}
+header {
+    height: 100px;
+    padding: 0 15px;
+}
+#content {
+    width: 20%;
+    float: left;
+    padding: 5px 15px;
+}
+
+#middle {
+    width: 60%; /* Account for margins + border values */
+    float: left;
+    padding: 5px 15px;
+    margin: 0px 5px 5px 5px;
+}
+
+#sidebar {
+    width: 20%;
+    padding: 5px 15px;
+    float: left;
+}
+footer {
+    clear: both;
+    padding: 0 15px;
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+    
+    #pagewrap {
+        width: 94%;
+    }
+    #content {
+        width: 41%;
+        padding: 1% 4%;
+    }
+    #middle {
+        width: 41%;
+        padding: 1% 4%;
+        margin: 0px 0px 5px 5px;
+        float: right;
+    }
+    
+    #sidebar {
+        clear: both;
+        padding: 1% 4%;
+        width: auto;
+        float: none;
+    }
+
+    header, footer {
+        padding: 1% 4%;
+    }
+}
+
+/* for 700px or less */
+@media screen and (max-width: 600px) {
+
+    #content {
+        width: auto;
+        float: none;
+    }
+    
+    #middle {
+        width: auto;
+        float: none;
+        margin-left: 0px;
+    }
+    
+    #sidebar {
+        width: auto;
+        float: none;
+    }
+
+}
+
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+
+    header {
+        height: auto;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    #sidebar {
+        display: none;
+    }
+
+}
+
+
+#content {
+    background: #f8f8f8;
+}
+#sidebar {
+    background: #f0efef;
+}
+header, #content, #middle, #sidebar {
+    margin-bottom: 5px;
+}
+
+/* General CSS Setup */
+
+
+/* container */
+.container {
+  padding: 5% 5%;
+}
+
+/* CSS talk bubble */
+.talk-bubble {
+    margin: 40px;
+  display: inline-block;
+  position: relative;
+    width: 200px;
+    height: 60px;
+    background-color: rgba(3, 169, 244, 0.88);
+}
+.border{
+  border: 8px solid #666;
+}
+.round{
+  border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+
+}
+
+/* Right triangle placed top left flush. */
+.tri-right.border.left-top:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+  left: -40px;
+    right: auto;
+  top: -8px;
+    bottom: auto;
+    border: 32px solid;
+    border-color: #666 transparent transparent transparent;
+}
+.tri-right.left-top:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+  left: -20px;
+    right: auto;
+  top: 0px;
+    bottom: auto;
+    border: 22px solid;
+    border-color: rgba(3, 169, 244, 0.88); transparent transparent transparent;
+}
+
+/* Right triangle, left side slightly down */
+.tri-right.border.left-in:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+  left: -40px;
+    right: auto;
+  top: 30px;
+    bottom: auto;
+    border: 20px solid;
+    border-color: #666 #666 transparent transparent;
+}
+.tri-right.left-in:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+  left: -20px;
+    right: auto;
+  top: 10px;
+    bottom: auto;
+    border: 12px solid;
+    border-color: rgba(3, 169, 244, 0.88) rgba(3, 169, 244, 0.88) transparent transparent;
+}
+
+/*Right triangle, placed bottom left side slightly in*/
+.tri-right.border.btm-left:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -8px;
+  right: auto;
+  top: auto;
+    bottom: -40px;
+    border: 32px solid;
+    border-color: transparent transparent transparent #666;
+}
+.tri-right.btm-left:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0px;
+  right: auto;
+  top: auto;
+    bottom: -20px;
+    border: 22px solid;
+    border-color: transparent transparent transparent rgba(3, 169, 244, 0.88);;
+}
+
+/*Right triangle, placed bottom left side slightly in*/
+.tri-right.border.btm-left-in:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 30px;
+  right: auto;
+  top: auto;
+    bottom: -40px;
+    border: 20px solid;
+    border-color: #666 transparent transparent #666;
+}
+.tri-right.btm-left-in:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 38px;
+  right: auto;
+  top: auto;
+    bottom: -20px;
+    border: 12px solid;
+    border-color: rgba(3, 169, 244, 0.88) transparent transparent rgba(3, 169, 244, 0.88);
+}
+
+/*Right triangle, placed bottom right side slightly in*/
+.tri-right.border.btm-right-in:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+  left: auto;
+    right: 30px;
+    bottom: -40px;
+    border: 20px solid;
+    border-color: #666 #666 transparent transparent;
+}
+.tri-right.btm-right-in:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+  left: auto;
+    right: 38px;
+    bottom: -20px;
+    border: 12px solid;
+    border-color: rgba(3, 169, 244, 0.88) rgba(3, 169, 244, 0.88) transparent transparent;
+}
+/*
+    left: -8px;
+  right: auto;
+  top: auto;
+    bottom: -40px;
+    border: 32px solid;
+    border-color: transparent transparent transparent #666;
+    left: 0px;
+  right: auto;
+  top: auto;
+    bottom: -20px;
+    border: 22px solid;
+    border-color: transparent transparent transparent lightyellow;
+
+/*Right triangle, placed bottom right side slightly in*/
+.tri-right.border.btm-right:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+  left: auto;
+    right: -8px;
+    bottom: -40px;
+    border: 20px solid;
+    border-color: #666 #666 transparent transparent;
+}
+.tri-right.btm-right:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+  left: auto;
+    right: 0px;
+    bottom: -20px;
+    border: 12px solid;
+    border-color: rgba(3, 169, 244, 0.88) rgba(3, 169, 244, 0.88) transparent transparent;
+}
+
+/* Right triangle, right side slightly down*/
+.tri-right.border.right-in:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+  left: auto;
+    right: -40px;
+  top: 30px;
+    bottom: auto;
+    border: 20px solid;
+    border-color: #666 transparent transparent #666;
+}
+.tri-right.right-in:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+  left: auto;
+    right: -20px;
+  top: 38px;
+    bottom: auto;
+    border: 12px solid;
+    border-color: rgba(3, 169, 244, 0.88) transparent transparent rgba(3, 169, 244, 0.88);
+}
+
+/* Right triangle placed top right flush. */
+.tri-right.border.right-top:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+  left: auto;
+    right: -40px;
+  top: -8px;
+    bottom: auto;
+    border: 32px solid;
+    border-color: #666 transparent transparent transparent;
+}
+.tri-right.right-top:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+  left: auto;
+    right: -20px;
+  top: 0px;
+    bottom: auto;
+    border: 20px solid;
+    border-color: rgba(3, 169, 244, 0.88) transparent transparent transparent;
+}
+
+/* talk bubble contents */
+.talktext{
+  padding: 1em;
+    text-align: left;
+  /*line-height: 1.5em;*/
+}
+.talktext p{
+  /* remove webkit p margins */
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+
+
+.capsule {
+    width: 150px;
+    height: 2em;
+    margin: 2em auto;
+    border-radius: 500px;
+    background-color:rgba(3, 169, 244, 0.88);
+}
+
+   
